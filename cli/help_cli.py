@@ -1,4 +1,4 @@
-def processCommand(args):
+def processCommand(mgr, args):
     print("""
 The 'maws' tool is a command line interface to the python-awstools configured
 library for managing ephemeral AWS resources like instances, DNS records,
