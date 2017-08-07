@@ -3,6 +3,7 @@
 import argparse
 import sys
 from mawslib.manager import Manager
+import importlib
 
 configfile="cloudconfig.yaml"
 
@@ -33,5 +34,5 @@ mgr.showname()
 if args.command == "cfn": args.command = "cloudformation"
 if args.command == "r53": args.command = "route53"
 
-exec("from cli.%s_cli import processCommand" % args.command)
-processCommand(mgr, subargs)
+cli_mod = importlib.import_module("cli.%s_cli" % args.command)
+cli_mod.processCommand(mgr, subargs)
