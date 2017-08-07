@@ -3,3 +3,4 @@ AUTHORS
 =======
 
 David L. Parsley - <parsley@linuxjedi.org> / <dlp7y@virginia.edu>
+Peter M. Traub   - <pmt4u@virginia.edu>
