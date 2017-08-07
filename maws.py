@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 import argparse
 import sys
@@ -12,8 +12,9 @@ parser = argparse.ArgumentParser(
     usage='''maws [<options>] <command> <subcommand> [<args>]
 
 For help:
-   maws help                Give general help plus a list of commands
-   maws <command> help      Give help on a specific command
+   maws help
+   maws <command> help
+   maws <command> <subcommand> help
 ''')
 parser.add_argument('command', help='Command to run',
     choices = ['help', 'ec2', 'sdb', 'route53', 'r53', 'rds',
@@ -26,7 +27,6 @@ parser.add_argument('--config',
 args, subargs = parser.parse_known_args()
 
 if hasattr(args, "config"): configfile = args.config
-print("Creating manager with file: %s" % configfile)
 mgr = Manager(configfile)
 mgr.showname()
 
@@ -34,4 +34,4 @@ if args.command == "cfn": args.command = "cloudformation"
 if args.command == "r53": args.command = "route53"
 
 exec("from cli.%s_cli import processCommand" % args.command)
-processCommand(subargs)
+processCommand(mgr, subargs)
