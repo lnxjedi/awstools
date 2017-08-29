@@ -4,6 +4,9 @@ Instead of each volume / ec2 instance / rds instance / whatever being defined in
 resources, AWS Tools focuses on a higher-level abstraction layer for dynamically creating,
 starting, stopping, etc. resources.
 
+## Status
+`awstools` is an in-progress re-write of 'ruby-awstools', with as yet no usable functionality.
+
 ## Intent
 The intent is to create a tool that uses the AWS API to manage individual server instances,
 essentially implementing a flexible data center in the Cloud. The intial driver was for
