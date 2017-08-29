@@ -34,6 +34,9 @@ intiated the operation
 * Resources are created based on a library-standard and flexible template format that
 the library processes to create e.g. CloudFormation templates or API option data
 structures
+* The bulk of code should be in a loadable library, with the provided CLI being a
+lightweight user interface to the library
+* The library should be readily loadable and useable by other scripts
 * Methods are intended to be useful for workflows like:
   * Patching servers
   * Cloning servers
