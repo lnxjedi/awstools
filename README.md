@@ -41,3 +41,5 @@ lightweight user interface to the library
   * Patching servers
   * Cloning servers
   * Transitioning servers through devel/test/staging/production
+* The tool operates on configuration files in a separate data repository, similar
+to Ansible
