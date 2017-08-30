@@ -1,8 +1,9 @@
 # AWSTools
 AWS Tools is a configurable library for integrated management of AWS ephemeral resources.
 Instead of each volume / ec2 instance / rds instance / whatever being defined in a list of
-resources, AWS Tools focuses on a higher-level abstraction layer for dynamically creating,
-starting, stopping, etc. resources.
+resources (CloudFormation / Terraform), AWS Tools focuses on a higher-level abstraction layer
+for dynamically creating, starting, stopping, etc. resources, with integrated DNS updates
+and support for workflows not readily acheivable by other means.
 
 ## Status
 `awstools` is an in-progress re-write of 'ruby-awstools', with as yet no usable functionality.
