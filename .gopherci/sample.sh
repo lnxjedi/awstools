@@ -5,3 +5,5 @@
 source $GOPHER_INSTALLDIR/lib/gopherbot_v1.sh
 
 Say "I got: $*"
+Log "Debug" "Saw: $*"
+AddTask tail-log
